@@ -34,7 +34,7 @@ Our environment are provided in lorkd.yaml (conda) and requirements.txt (pip).
 ## Inference Guidance:
 - S1. Build the environment following the requirements.
 
-- S2. Download checkpoint of LoRKD and Text Encoder from [Google Drive](https://drive.google.com/drive/folders/1VJFXGf-bdYuDwKI5xDKtlEi-uQT3GTO3?usp=share_link). Download the [BioLORD](https://huggingface.co/FremyCompany/BioLORD-2023-C) checkpoint for the Text Encoder.
+- S2. Download checkpoint of LoRKD and Text Encoder from [Google Drive](https://drive.google.com/drive/folders/1OL5gTSrnO3l8Gyf5Mss0WsAkFtSpkKSS?usp=sharing). Download the [BioLORD](https://huggingface.co/FremyCompany/BioLORD-2023-C) checkpoint for the Text Encoder.
 
 - S3. Prepare the data to inference in a jsonl file. A demo can be found in `data/inference_demo/demo.jsonl`. Make sure the image path, label name and modality are correctly filled in. `image`(path to image), `label`(name of segmentation targets), `dataset`(which dataset the sample belongs to) and `modality`(ct, mri or pet) are needed for each sample to segment. 
 The input image should be with shape `H,W,D` Our data process code will normalize the input image in terms of orientation, intensity, spacing and so on. Make sure the normalization is done correctly to guarantee the performance of the model.
