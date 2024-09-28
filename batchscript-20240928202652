@@ -1,0 +1,60 @@
+#!/bin/bash
+#SBATCH --partition medai_llm
+#SBATCH --quotatype spot
+#SBATCH --output /mnt/petrelfs/lihaolin/project/SAT-decompose/LoRKD-seg/log/async/inference/lorkd_imbalance_pro_inference_demo.out
+#SBATCH --cpus-per-task 16
+#SBATCH --gres gpu:1
+# args: -p
+# args: medai_llm
+# args: --quotatype=spot
+# args: --cpus-per-task=16
+# args: --gres=gpu:1
+# args: torchrun
+# args: --nnodes
+# args: 1
+# args: --nproc_per_node
+# args: 1
+# args: --rdzv_id
+# args: 100
+# args: --rdzv_backend
+# args: c10d
+# args: --rdzv_endpoint=127.0.0.1:28161
+# args: inference_lora_imbalance.py
+# args: --rcd_dir
+# args: /mnt/petrelfs/lihaolin/project/SAT-decompose/LoRKD-seg/log/inference/lorkd_imbalance_pro_inference_demo
+# args: --datasets_jsonl
+# args: /mnt/petrelfs/lihaolin/project/SAT-decompose/LoRKD-seg/dataset/inference_demo/demo.jsonl
+# args: --crop_size
+# args: 288
+# args: 288
+# args: 96
+# args: --vision_backbone
+# args: UNET_nano_lora
+# args: --checkpoint
+# args: /mnt/petrelfs/lihaolin/model/SAT/decompose/49_lora/lorkd-imbalance-pro.pth
+# args: --partial_load
+# args: True
+# args: --biolord_checkpoint
+# args: /mnt/hwfile/medai/lihaolin/models/huggingface/BioLORD-2023-C
+# args: --knowledge_encoder_checkpoint
+# args: /mnt/petrelfs/lihaolin/model/SAT/SAT_ckpt/ultra_text_encoder_200k.pth
+# args: --query_generator_partial_load
+# args: True
+# args: --region_split_json
+# args: /mnt/petrelfs/lihaolin/project/SAT-decompose/LoRKD-seg/dataset/mod_lab(49).json
+# args: --batchsize_3d
+# args: 1
+# args: --max_queries
+# args: 256
+# args: --gamma_list
+# args: 4,4,4,4,4,16,12,12
+# args: --num_workers
+# args: 8
+argv=()
+while read -r line; do
+    if [[ $line == "# args: "* ]]; then
+        argv[${#argv[*]}]="${line:8}"
+    fi
+done < $0
+
+srun "${argv[@]}"
