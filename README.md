@@ -1,11 +1,12 @@
 # LoRKD
 This is the official repository for "LoRKD: Low-Rank Knowledge Decomposition for Medical Foundation Models", including our code for segmentation tasks. Please refer to [LoRKD](https://github.com/MediaBrain-SJTU/LoRKD) for the code for classification tasks.
 
+[ArXiv](https://arxiv.org/abs/2404.17184)
+
 The conference version of our paper can be found in CVPR [version](https://openaccess.thecvf.com/content/CVPR2024/html/Zhou_Low-Rank_Knowledge_Decomposition_for_Medical_Foundation_Models_CVPR_2024_paper.html).
 
 <img src="docs/method-lorkd.jpg" alt="" align=center />
 
-[ArXiv](https://arxiv.org/abs/2404.17184)
 
 In segmentation tasks, we decompose the foundation models [SAT](https://github.com/zhaoziheng/SAT) into lighter yet stronger expert models. The dataset can be found in [SAT-DS](https://github.com/zhaoziheng/SAT-DS/tree/main).
 
@@ -42,7 +43,6 @@ The input image should be with shape `H,W,D` Our data process code will normaliz
     ```
     sh sbatch_script/inference_lorkd_imbalance_pro_lora.sh
     ```
-    The checkpoint path
     Note that you need to change the checkpoint path to your own directory, and you can modify `--max_queries` and `--batchsize` to accelerate the inference, based on the computation resource you have.
 
 - S5. Check the path where you store the images. For each image, a folder with the same name will be created. Inside each folder, you will find the predictions for each label (named after the label), the aggregate results for all labels (prediction.nii.gz), and the input image (image.nii.gz). You can visualize them using the [ITK-SNAP](http://www.itksnap.org/pmwiki/pmwiki.php).
