@@ -1,7 +1,7 @@
 # LoRKD
 This is the official repository for "LoRKD: Low-Rank Knowledge Decomposition for Medical Foundation Models", including our code for segmentation tasks. Please refer to [LoRKD](https://github.com/MediaBrain-SJTU/LoRKD) for the code for classification tasks.
 
-[ArXiv](https://arxiv.org/abs/2404.17184)
+[ArXiv](https://arxiv.org/abs/2409.19540)
 
 The conference version of our paper can be found in CVPR [version](https://openaccess.thecvf.com/content/CVPR2024/html/Zhou_Low-Rank_Knowledge_Decomposition_for_Medical_Foundation_Models_CVPR_2024_paper.html).
 
