@@ -57,6 +57,12 @@ The input image should be with shape `H,W,D` Our data process code will normaliz
 # Citation
 If you find LoRKD useful for your research or project, please cite the following:
 ```
+@article{li2024lorkd,
+  title={LoRKD: Low-Rank Knowledge Decomposition for Medical Foundation Models},
+  author={Li, Haolin and Zhou, Yuhang and Zhao, Ziheng and Du, Siyuan and Yao, Jiangchao and Xie, Weidi and Zhang, Ya and Wang, Yanfeng},
+  journal={arXiv preprint arXiv:2409.19540},
+  year={2024}
+}
 @inproceedings{zhou2024low,
   title={Low-Rank Knowledge Decomposition for Medical Foundation Models},
   author={Zhou, Yuhang and Li, Haolin and Du, Siyuan and Yao, Jiangchao and Zhang, Ya and Wang, Yanfeng},
