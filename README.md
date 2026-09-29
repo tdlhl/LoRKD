@@ -48,12 +48,6 @@ The input image should be with shape `H,W,D` Our data process code will normaliz
 - S5. Check the path where you store the images. For each image, a folder with the same name will be created. Inside each folder, you will find the predictions for each label (named after the label), the aggregate results for all labels (prediction.nii.gz), and the input image (image.nii.gz). You can visualize them using the [ITK-SNAP](http://www.itksnap.org/pmwiki/pmwiki.php).
 
 
-## TODO
-- [x] Release the inference code of LoRKD
-- [x] Release the model of LoRKD
-- [ ] Release the training and evaluation code of LoRKD
-
-
 # Citation
 If you find LoRKD useful for your research or project, please cite the following:
 ```
