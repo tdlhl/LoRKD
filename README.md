@@ -1,7 +1,7 @@
-# LoRKD
+# [TPAMI 2026] LoRKD
 This is the official repository for "LoRKD: Low-Rank Knowledge Decomposition for Medical Foundation Models", including our code for segmentation tasks. Please refer to [LoRKD](https://github.com/MediaBrain-SJTU/LoRKD) for the code for classification tasks.
 
-[ArXiv](https://arxiv.org/abs/2409.19540)
+[TPAMI Paper](https://ieeexplore.ieee.org/document/11702775)
 
 The conference version of our paper can be found in CVPR [version](https://openaccess.thecvf.com/content/CVPR2024/html/Zhou_Low-Rank_Knowledge_Decomposition_for_Medical_Foundation_Models_CVPR_2024_paper.html).
 
@@ -57,11 +57,15 @@ The input image should be with shape `H,W,D` Our data process code will normaliz
 # Citation
 If you find LoRKD useful for your research or project, please cite the following:
 ```
-@article{li2024lorkd,
-  title={LoRKD: Low-Rank Knowledge Decomposition for Medical Foundation Models},
+@ARTICLE{11702775,
   author={Li, Haolin and Zhou, Yuhang and Zhao, Ziheng and Du, Siyuan and Yao, Jiangchao and Xie, Weidi and Zhang, Ya and Wang, Yanfeng},
-  journal={arXiv preprint arXiv:2409.19540},
-  year={2024}
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence}, 
+  title={LoRKD: Low-Rank Knowledge Decomposition for Medical Foundation Models}, 
+  year={2026},
+  volume={},
+  number={},
+  pages={1-18},
+  doi={10.1109/TPAMI.2026.3736382}
 }
 @inproceedings{zhou2024low,
   title={Low-Rank Knowledge Decomposition for Medical Foundation Models},
